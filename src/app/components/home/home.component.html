@@ -1,0 +1,104 @@
+<div class="home">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 nopad bg">
+				
+				<div class="head">
+					<img src="./assets/images/head1.png" class="right">
+					<div class="head_title">
+						<h4>الخطة الاستراتيجية</h4>
+						<h4>لكلية المسجد النبوي</h4>
+						<p> 1439 - 1444 ه | 2018 - 2022 م </p>
+					</div>
+					<img src="./assets/images/head2.png" class="left">
+				</div>
+
+				<nav class="navbar navbar-default">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						    </button>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar1">
+							<ul class="nav navbar-nav">
+								<li routerLinkActive="active" data-target="#myCarousel" data-slide-to="0"><a>
+									<img src="assets/images/home/mission.png" alt="">الرؤية</a>
+								</li>
+								<li routerLinkActive="active" data-target="#myCarousel" data-slide-to="1"><a>
+									<img src="assets/images/home/message.png" alt="">الرسالة</a>
+								</li>
+								<li routerLinkActive="active" data-target="#myCarousel" data-slide-to="2"><a>
+									<img src="assets/images/home/goal.png" alt="">اﻷهداف</a>
+								</li>
+								<li routerLinkActive="active" data-target="#myCarousel" data-slide-to="3"><a>
+									<img src="assets/images/home/program.png" alt="">البرامج</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+
+				<app-marquee></app-marquee>
+				<app-slider></app-slider>
+
+				<div class="content">
+				    <h4>أهلا ومرحبا بكم في الموقع الرسمي للخطة الاستراتيجية لكلية المسجد النبوي.</h4>
+				    <p>
+				        لقد عملت الرئاسة العامة لشؤون المسجد الحرام والمسجد النبوي على الالتزام برؤية المملكة الواعدة من خلال إعداد استراتيجيتها العامة (حرمين) للسنوات العشر 1438-1448هـ والتي من خلالها يعمل كل قطاع ذو شخصية اعتبارية من قطاعات الرئاسة ببناء خطته لاستراتيجية والمسارات التنفيذية الخاصة به. وامتدادا لجهود الرئاسة العامة في تحقيق رؤية المملكة 2030م، عملت كلية المسجد النبوي كإحدى أهم القطاعات التعليمية التابعة للرئاسة على بناء خطتها الاستراتيجية للسنوات الخمس 1439-1444هـ تحت مظلة استراتيجية الرئاسة العامة لشؤون المسجد الحرام والمسجد النبوي. 
+				    </p>
+				</div> 
+
+
+				<app-footer></app-footer>
+			</div>
+			<div class="col-md-3 nopad">
+				<!-- <app-sidebar></app-sidebar> -->
+
+				<div class="sidebar">
+					<h2>نظام توثيق <br />
+						و متابعة المشاريع <br />
+						والمهام الاستراتيجية
+					</h2>
+					<h3>
+						نظام متكامل لتوثيق و متابعة تنفيذ الخطة الاستراتيجية من ناحية الانجاز، المخرجات والماليات
+					</h3>
+					<ul class="list-group">
+						<li>
+							إدارة المهام وتحديد اﻷشخاص المسؤولين عن كل مهمة والنطاق الزمني للتنفيذ ومتابعة الجداول الزمنية والمخرجات.
+						</li>
+						<li>
+							إدارة الميزانية التقديرية للخطة وأوجه الصرف علي البرامج والمشاريع المختلفة.
+						</li>
+						<li>
+							نظام مرن وسهل اﻷستخدام لبناء التقارير مع مكتبة من التقارير سابقة التعريف.
+						</li>
+						<li>
+							إرسال التنبيهات للمستخدمين بصورة الية عبر الرساءل الإلكترونية (e-mail) وحسابات المستخدمين.
+						</li>
+						<li>
+							الية شاملة لتعريف وإدارة صلاحيات المستخدمين.
+						</li>
+						<li>
+							دعم اﻷجهزة الذكية.
+						</li>
+					</ul>
+					<div class="form-group">
+						<input type="text" class="form-control" id="username" placeholder="اسم المستخدم">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="password" placeholder="كلمة المرور">
+					</div>
+					<a id="forget_password" routerLink="/#">نسيت كلمه السر أو اسم المستخدم؟</a>
+					<!-- <a routerLink="/plans"> -->
+					<button class="btn btn-success btn-block" id="login" (click)="login()">تسجيل الدخول</button>
+					<!-- </a> -->
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

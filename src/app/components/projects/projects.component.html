@@ -1,0 +1,68 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<app-navbar></app-navbar>
+			<app-marquee></app-marquee>
+		</div>
+	</div>
+
+	<div class="projects">
+		<div class="row">
+			<div class="col-md-9 col-sm-12">
+				<div class="row">
+					<div class="col-md-12">
+						<h3>
+							<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> الخطة في السطور
+						</h3>
+						<div class="prj_title">
+							<img src="./assets/images/projects.png">
+							<h4>{{activeProject.name}}</h4>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-5">
+						<app-list [list]="projects" (change)="getData($event)"></app-list>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-7">
+						<div class="content">
+							<p><span class="title">عنوان المشروع:</span>{{activeProject.name || " غير متاح "}}</p>
+							<p><span class="title">التكلفة التقديرية: </span>{{activeProject.approxCost || " غير متاح "}}</p>
+							<p><span class="title">فترة المشروع: </span>{{activeProject.prgPeriod || " غير متاح "}}</p>
+							<p><span class="title">مدير المشروع: </span>{{activeProject.manager || " غير متاح "}}</p>
+							<p><span class="title">تاريخ البداية المخطط: </span>{{activeProject.datePlannedStart || " غير متاح "}}</p>
+							<p><span class="title">تاريخ البداية الفعلي: </span>{{activeProject.dateActualStart || " غير متاح "}}</p>
+							<p><span class="title">تاريخ النهاية المخطط: </span>{{activeProject.datePlannedEnd || " غير متاح "}}</p>
+							<p><span class="title">تاريخ النهاية الفعلي: </span>{{activeProject.dateActualEnd || " غير متاح "}}</p>
+							<p>
+								<span class="title">وصف المشروع: </span>
+								{{activeProject.description != "" ? activeProject.description : "لا يوجد"}}
+							</p>
+							<h5>مراحل المشروع: </h5>
+							<ul *ngIf="activeProject.stages.length > 0">
+								<li *ngFor="let stage of activeProject.stages"> {{ "- " +stage.name}} </li>
+							</ul>
+							<ul *ngIf="activeProject.stages.length == 0">
+								<li>لا يوجد</li>
+							</ul>
+							
+							<h5>مخرجات المشروع: </h5>
+							<!-- <ul>
+								<li *ngFor="let item of activeProject.outputs "> {{ item }} </li>
+							</ul> -->
+							<ul>
+								<li>{{ activeProject.outputs[0] != "" ? activeProject.outputs[0] : "لا يوجد" }}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-md-push-0 col-sm-push-4">
+				<app-state [state]="analytics"></app-state>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 nopad">
+			<app-footer></app-footer>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+.sidebar{
+	background-color: #eee;
+	padding: 20px;
+	/*color: #c79462;*/
+	min-height: 815px;
+}
+.sidebar > h2{
+	color: #335d48; /*#4a1e03*/
+}
+.sidebar .form-control{
+	color: #4a1e03;	
+	/*border-color: #4a1e03;*/
+}
+#forget_password{
+	text-decoration: underline;
+	float: left;
+	/*color: #c79462;*/
+	margin-bottom: 40px;
+}
+#login{
+	/*background: #c79462;*/
+	float: left;
+	/*border-color: #4a1e03;*/
+}
+/*#login:hover,
+#login:focus{
+	background: #c79462;
+}*/
+.list-group{
+	text-align: justify;
+	list-style-type: disc;
+}
+.list-group > li{
+	margin-bottom: 15px;
+}
+
+h3{
+	font-size: 23px;
+	margin: 20px 0;
+}

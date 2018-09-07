@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
+@import '~css-percentage-circle/css/circle.css';
+
+ul{
+	list-style-type: none;
+}

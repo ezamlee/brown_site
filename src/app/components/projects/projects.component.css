@@ -1,0 +1,69 @@
+.projects{
+	margin: 0 0 50px;
+}
+.prj_title img{
+  display: inline-block;
+  float: right;
+  width: 55px;
+}
+.prj_title h4{
+  display: inline-block;
+  line-height: 30px;
+}
+.content{
+	margin: 10px;
+}
+.content p, .content p span{
+  font-size: 18px; 
+}
+p, ul{
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.title, h5{
+	color: #c79462;
+	font-size: 17px;
+}
+.collapsed-icon-toggle.collapsed .on-closed {
+  display: initial;
+}
+.collapsed-icon-toggle.collapsed .on-opened {
+  display: none;
+}
+.collapsed-icon-toggle .on-closed {
+  display: none;
+}
+.collapsed-icon-toggle .on-opened {
+  display: initial;
+}
+.scroll-v-250px {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+.padding-v-xs {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.btn.ico span.icon {
+  opacity: 0;
+}
+.btn.ico.active span.icon {
+  opacity: 1;
+}
+.item{
+  cursor: pointer;
+  display: block;
+}
+h3{
+  color: #c79462;
+  margin-bottom: 20px;
+}
+h4{
+  margin-bottom: 20px;
+  color: #4a1e03;
+}
+ul li{
+  font-size: 18px;
+  margin-bottom: 10px;
+}

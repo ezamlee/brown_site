@@ -1,0 +1,61 @@
+<div class="state">
+		<div class="block1">
+			<div class="circle1">
+				<p style="font-size: 11px;" *ngIf="state.status == 1 ? true : false"> تحت الدراسة والاعتماد </p>
+				<p *ngIf="state.status == 2 ? true : false"> لم يبدء بعد </p>
+				<p *ngIf="state.status == 3 ? true : false"> متوقف مؤقتا </p>
+				<p *ngIf="state.status == 4 ? true : false">منتظم</p>
+				<p *ngIf="state.status == 5 ? true : false"> متأخر</p>
+				<p *ngIf="state.status == 6 ? true : false"> ملغى</p>
+				<p *ngIf="state.status == 7 ? true : false"> منتهي</p>
+				<p style="font-size: 11px;" *ngIf="state.status == 8 ? true : false"> البيانات غير مكتملة</p>
+				<p *ngIf="!state.status"> مجهول </p>
+			</div>
+			<h4>الحالة الراهنة</h4>
+		</div>
+
+	<div class="block2">
+		<div class="circle2">
+			<p>{{ state.passed < 0 ? 0: state.passed }}</p>
+		</div>
+		<h4>المنقضى من فترة التنفيذ</h4>
+	</div>
+	<div class="block2">
+		<div class="circle2">
+			<p>{{ state.completed ? Math.ceil(state.completed) : 0   }}</p>
+		</div>
+		<h4>نسبة الانجاز الكلية</h4>
+	</div>
+	<div class="block2">
+		<div class="circle2">
+			<p>{{ state.quality ? this.Math.ceil(state.quality)  : 0 }}</p>
+		</div>
+		<h4>نسبة جودة اﻷداء</h4>
+	</div>
+
+	<svg viewBox="0 -20 920 900" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="800" cy="100" r="100" style="fill: #4a1e03; stroke: #ddd; stroke-width: 15"/>
+		<text x="800" y="120" text-anchor="middle" style="fill: #fff; font-size: 80px;">{{ state.LEN }}</text>
+		<text x="400" y="110" text-anchor="middle" style="fill: #4a1e03; font-size: 70px">
+			عدد المهام الحالية
+		</text>
+		<line x1="800" y1="200" x2="800" y2="800" stroke-width="2" stroke="#337ab7"/>
+
+		<circle cx="600" cy="400" r="80" style="fill: #A7852B; stroke: #ddd; stroke-width: 15" />
+		<text x="600" y="420" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ state.ONT }}</text>
+		<text x="300" y="410" text-anchor="middle" style="fill: #337ab7; font-size: 55px;">المهام المنتظمة</text>
+		<line x1="690" y1="400" x2="800" y2="400" stroke-width="2" stroke="#337ab7"/>
+
+		<circle cx="600" cy="600" r="80" style="fill: #A7852B; stroke: #ddd; stroke-width: 15" />
+		<text x="600" y="620" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ state.LTE }}</text>
+		<text x="300" y="610" text-anchor="middle" style="fill: #337ab7; font-size: 55px;">المهام المتأخرة</text>
+		<line x1="690" y1="600" x2="800" y2="600" stroke-width="2" stroke="#337ab7"/>
+
+		<circle cx="600" cy="800" r="80" style="fill: #A7852B; stroke: #ddd; stroke-width: 15" />
+		<text x="600" y="820" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ state.STP }}</text>
+		<text x="300" y="810" text-anchor="middle" style="fill: #337ab7; font-size: 55px;">المهام المتوقفة</text>
+		<line x1="690" y1="800" x2="800" y2="800" stroke-width="2" stroke="#337ab7"/>
+
+	</svg>
+
+</div>

@@ -1,0 +1,26 @@
+.marquee {
+    width: 99%;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+    height: 40px;
+    background: #efefef;
+    line-height: 40px;
+    border: 1px solid #a58a4b;
+    border-radius: 10px;
+    box-shadow: 0px -1px 5px #aaa;
+    color: #4a1e03;
+}
+.marquee .news{
+    font-weight: bold;
+}
+.marquee:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+    0%   { text-indent: 99% }
+    100% { text-indent: -50% }
+}

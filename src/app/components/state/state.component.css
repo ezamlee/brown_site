@@ -1,0 +1,37 @@
+.state{
+	text-align: center;
+}
+.block1, .block2{
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+.block1 .circle1 {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	line-height: 100px;
+	text-align: center;
+	background: #4a1e03;
+	border: 10px solid #ddd;
+	margin: 0 auto;
+}
+.block1 .circle1 p{
+	margin: 0px;
+}
+.block1 h4{
+	color: #c79462;
+}
+.block2 .circle2 {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	font-size: 18px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	background: #A7852B;
+	border: 10px solid #ddd;
+	margin: 0 auto;
+}

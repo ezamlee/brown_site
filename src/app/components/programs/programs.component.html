@@ -1,0 +1,80 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<app-navbar></app-navbar>
+			<app-marquee></app-marquee>
+		</div>
+	</div>	
+	<div class="programs">
+		<div class="row">
+			<div class="col-md-9 col-sm-12">
+				<div class="row">
+					<div class="col-md-12">
+						<h3>
+							<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> الخطة في السطور
+						</h3>
+						<div class="prg_title">
+							<img src="./assets/images/programs.png">
+							<h4>{{activeProgram.name}}</h4>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-5">
+						<app-list [list]="programs" (change)="getData($event)" ></app-list>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-7">
+						<div class="content">
+							<p><span class="title">عنوان البرنامج:</span> {{activeProgram.name || " غير متاح "}} </p>
+							<p><span class="title">التكلفة التقديرية: </span> {{activeProgram.approxCost || " غير متاح "}}</p>
+							<p><span class="title">فترة البرنامج: </span>{{activeProgram.prgPeriod || " غير متاح "}} </p>
+							<p><span class="title">مدير البرنامج: </span> {{activeProgram.manager || " غير متاح "}}</p>
+							<p><span class="title">تاريخ البداية المخطط: </span> {{activeProgram.datePlannedStart || " غير متاح "}}</p>
+							<p><span class="title">تاريخ البداية الفعلي: </span> {{activeProgram.dateActualStart || " غير متاح "}}</p>
+							<p><span class="title">تاريخ لنهاية المخطط: </span> {{activeProgram.datePlannedEnd || " غير متاح "}}</p>
+							<p><span class="title">تاريخ النهاية الفعلي: </span> {{activeProgram.dateActualEnd || " غير متاح " }}</p>
+							<p><span class="title">وصف البرنامج: </span> 
+								{{activeProgram.description!= "" ? activeProgram.description : "لا يوجد"}}
+							</p>
+
+							<h5>اﻷهداف العامة: </h5>
+							<ul>
+								<li *ngFor="let goal of activeProgram.goals">{{ "- " + goal.l1}}</li>
+							</ul>
+
+							<h5>المشاريع: </h5>
+							<ul>
+								<li *ngFor="let project of activeProgram.projects">{{ "- " + project}}</li>
+							</ul>
+
+							<!-- <ul *ngIf="activeProgram.goals.length > 0;else elseBlock1">
+								<li *ngFor="let goal of activeProgram.goals">{{ "- " + goal.l1}}</li>
+							</ul>
+							<ng-template #elseBlock1>
+								<ul>
+									<li>لا يوجد</li>
+								</ul>
+							</ng-template>
+
+							<h5>المشاريع: </h5>
+							<ul *ngIf="activeProgram.projects.length > 0;else elseBlock2">
+								<li *ngFor="let project of activeProgram.projects">{{ "- " + project}}</li>
+							</ul>
+							<ng-template #elseBlock2>
+								<ul>
+									<li>لا يوجد</li>
+								</ul>
+							</ng-template> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-md-push-0 col-sm-push-4">
+				<app-state [state]="analytics"></app-state>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 nopad">
+			<app-footer></app-footer>
+		</div>
+	</div>
+</div>

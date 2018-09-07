@@ -1,0 +1,147 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<app-navbar></app-navbar>
+			<app-marquee></app-marquee>
+		</div>
+	</div>	
+	<div class="plans">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="content">
+					<h3>
+						<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> الخطة في السطور
+					</h3>
+					<div class="plan">
+						<img src="./assets/images/plan1.png">
+						<h3>اﻷهداف الاستراتيجة للخطة</h3>
+					</div>
+					<ul>
+						<li *ngFor="let goal of goals"> {{ "- " +goal.name }}</li>
+					</ul>
+					<div class="plan">
+						<img src="./assets/images/plan2.png">
+						<h3>برامج الخطة</h3>
+					</div>
+					
+					<ul>
+						<a *ngFor="let program of programs" [routerLink]="['/programs', {id: program._id}]"><li> {{ program.name }}</li></a>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-5" *ngIf="analytics">
+				<div class="brdr">
+					<div class="row">	
+						<div class="col-xs-4">
+							<div class="c100 p{{ this.Math.ceil(analytics.planPass) }} orange">
+								<span>{{ this.Math.ceil(analytics.planPass) }}</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+							</div>
+							<h4 class="text-center">المنقضي من فترة تنفيذ الخطة</h4>
+						</div>
+						<div class="col-xs-4 brd_rght">
+				 			<div class="c100 p{{ this.Math.ceil(analytics.WT) }} orange">
+								<span>{{ this.Math.ceil(analytics.WT) }}</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+							</div>
+							<h4 class="text-center">نسبة الانجاز الكلية</h4>
+						</div>
+						<div class="col-xs-4 brd_rght">
+							<div class="c100 p{{ this.Math.ceil(analytics.QA) }} orange">
+								<span>{{ this.Math.ceil(analytics.QA) }}</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+							</div>
+							<h4 class="text-center">نسبة جودة اﻷداء</h4>
+						</div>
+					</div>
+				</div>
+				
+				<div class="brdr">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="block2">
+								<div class="circle2">
+									<p>{{ analytics.prglen }}</p>
+								</div>
+								<h4>عدد البرامج الفاعلة</h4>
+							</div>
+							<div class="block2">
+								<div class="circle2">
+									<p>{{ analytics.prjlen }}</p>
+								</div>
+								<h4>عدد المشاريع الحالية</h4>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-4 brd_rght">
+
+							<svg viewBox="0 -20 920 900" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="800" cy="100" r="100" style="fill: #4a1e03; stroke: #ddd; stroke-width: 15"/>
+								<text x="800" y="120" text-anchor="middle" style="fill: #fff; font-size: 80px;">{{ analytic.LEN }}</text>
+								<text x="400" y="110" text-anchor="middle" style="fill: #4a1e03; font-size: 70px">
+									عدد المهام الحالية
+								</text>
+								<line x1="800" y1="200" x2="800" y2="800" stroke-width="2" stroke="#337ab7"/>
+
+								<circle cx="600" cy="400" r="80" style="fill: #c79462; stroke: #ddd; stroke-width: 15" />
+								<text x="600" y="420" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ analytic.ONT }}</text>
+								<text x="300" y="410" text-anchor="middle" style="fill: #c79462; font-size: 55px;">المهام المنتظمة</text>
+								<line x1="690" y1="400" x2="800" y2="400" stroke-width="2" stroke="#337ab7"/>
+
+								<circle cx="600" cy="600" r="80" style="fill: #c79462; stroke: #ddd; stroke-width: 15" />
+								<text x="600" y="620" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ analytic.LTE }}</text>
+								<text x="300" y="610" text-anchor="middle" style="fill: #c79462; font-size: 55px;">المهام المتأخرة</text>
+								<line x1="690" y1="600" x2="800" y2="600" stroke-width="2" stroke="#337ab7"/>
+
+								<circle cx="600" cy="800" r="80" style="fill: #c79462; stroke: #ddd; stroke-width: 15" />
+								<text x="600" y="820" text-anchor="middle" style="fill: #fff; font-size: 65px;">{{ analytic.STP }}</text>
+								<text x="300" y="810" text-anchor="middle" style="fill: #c79462; font-size: 55px;">المهام المتوقفة</text>
+								<line x1="690" y1="800" x2="800" y2="800" stroke-width="2" stroke="#337ab7"/>
+
+							</svg>
+
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4">
+						<a routerLink="/programs">
+							<h3>
+								البرامج
+							</h3>
+							<img src="assets/images/programs.png" class="img-responsive">
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a routerLink="/projects">
+							<h3>
+								المشاريع
+							</h3>
+							<img src="assets/images/projects.png" class="img-responsive">
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<h3>
+							التقارير
+						</h3>
+						<img src="assets/images/reports.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 nopad">
+			<app-footer></app-footer>
+		</div>
+	</div>
+</div>
