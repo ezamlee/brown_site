@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -44,6 +45,7 @@ import { LoginService } from './services/login/login.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: 'programs/:id', component: ProgramsComponent},
       {path: 'programs', component: ProgramsComponent},

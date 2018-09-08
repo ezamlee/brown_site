@@ -87,10 +87,10 @@
 						</li>
 					</ul>
 					<div class="form-group">
-						<input type="text" class="form-control" id="username" placeholder="اسم المستخدم">
+						<input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="اسم المستخدم">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" id="password" placeholder="كلمة المرور">
+						<input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="كلمة المرور">
 					</div>
 					<a id="forget_password" routerLink="/#">نسيت كلمه السر أو اسم المستخدم؟</a>
 					<!-- <a routerLink="/plans"> -->
