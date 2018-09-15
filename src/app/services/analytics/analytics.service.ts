@@ -13,11 +13,7 @@ export class AnalyticsService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.api.url}/${endPoint}?token=${token}`,
-				"method": "GET",
-				"headers": {
-				"Cache-Control": "no-cache",
-				"Postman-Token": "011e4224-ddb7-fefc-fc4f-dfaf5bdb3b61"
-				}
+				"method": "GET"
 			}
 
 			$.ajax(settings).done(response=> {

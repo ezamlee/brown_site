@@ -18,7 +18,7 @@ export class LoginService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.url}/login?username=${username}&password=${password}`,
-				"method": "POST",
+				"method": "POST"
 			}
 
 			$.ajax(settings).done(response=> {

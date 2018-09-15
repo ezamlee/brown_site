@@ -13,11 +13,7 @@ export class ProjectsService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.api.url}/project/list?token=${token}`,
-				"method": "POST",
-				"headers": {
-				"Cache-Control": "no-cache",
-				"Postman-Token": "011e4224-ddb7-fefc-fc4f-dfaf5bdb3b61"
-				}
+				"method": "POST"
 			}
 
 			$.ajax(settings).done(response=> {
@@ -35,11 +31,7 @@ export class ProjectsService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.api.url}/project/${id}?token=${token}`,
-				"method": "GET",
-				"headers": {
-				"Cache-Control": "no-cache",
-				"Postman-Token": "011e4224-ddb7-fefc-fc4f-dfaf5bdb3b61"
-				}
+				"method": "GET"
 			}
 
 			$.ajax(settings).done(response=> {

@@ -16,11 +16,7 @@ export class ProgramsService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.api.url}/program/list?token=${token}`,
-				"method": "POST",
-				"headers": {
-				"Cache-Control": "no-cache",
-				"Postman-Token": "011e4224-ddb7-fefc-fc4f-dfaf5bdb3b61"
-				}
+				"method": "POST"
 			}
 
 			$.ajax(settings).done(response=> {
@@ -39,11 +35,7 @@ export class ProgramsService {
 				"async": true,
 				"crossDomain": true,
 				"url": `${this.api.url}/program/${id}?token=${token}`,
-				"method": "GET",
-				"headers": {
-				"Cache-Control": "no-cache",
-				"Postman-Token": "011e4224-ddb7-fefc-fc4f-dfaf5bdb3b61"
-				}
+				"method": "GET"
 			}
 
 			$.ajax(settings).done(response=> {
@@ -62,13 +54,7 @@ export class ProgramsService {
 					"url": `${this.api.url}/project/list?token=${token}`,
 					"method": "POST",
 					"headers": {
-					"content-type": "application/json",
-					"cache-control": "no-cache",
-					"postman-token": "29e34188-41c2-39de-6e02-c4a7590d46f2",
-        			"Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Key",
-					"Access-Control-Allow-Origin":"*",
-					"Allow-Control-Allow-Origin":"*"
+					"content-type": "application/json"
 				},
 				"processData": false,
 				"data": `{\"program\": \"${id}\"}`
